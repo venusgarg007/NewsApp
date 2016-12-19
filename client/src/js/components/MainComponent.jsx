@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import SearchComponent from './SearchComponent'
 import ComponentManager from './ComponentManager'
 
@@ -13,7 +12,7 @@ export default class MainWindow extends React.Component {
   fetchNewsFromExternalAPI(provider) {
     var that = this;
      $.ajax({
-      url: "https://newsapi.org/v1/articles?source="+provider+"&apiKey=c37357c46e3441b29e0c4c976e74299c",
+      url: "https://newsapi.org/v1/articles?source="+provider+"&apiKey=084f2659b4864b4dab8debb2e55d0fd8",
       type: "GET",
       dataType: 'JSON',
       success : function(msg){

@@ -9,7 +9,7 @@ export default class favNews extends  React.Component{
   componentDidMount(){
   var that = this;
   $.ajax({
-  url: "http://localhost:8085/news",
+  url: "http://localhost:8081/news",
   type: "GET",
   dataType : 'JSON',
   success : function(msg){

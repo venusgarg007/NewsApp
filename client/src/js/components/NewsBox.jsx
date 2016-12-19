@@ -9,9 +9,8 @@ constructor(){
 saveNews(){
   console.log('inside saved');
   $.ajax({
-   url: "http://localhost:8085/news",
+   url: "http://localhost:8081/news",
    type: "POST",
-   dataType: 'JSON',
    data : this.props.item,
    success : function(msg){
    /*msg represents JSON data of news headlines sent back by external API*/

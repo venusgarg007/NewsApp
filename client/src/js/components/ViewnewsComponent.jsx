@@ -9,7 +9,7 @@ export default class ViewnewsComponent extends React.Component {
   deleteNews(){
   console.log(this.props.view.title);
   $.ajax({
-  url: "http://localhost:8085/news",
+  url: "http://localhost:8081/news",
   type: "DELETE",
   data : this.props.view.title,
   success : function(msg){

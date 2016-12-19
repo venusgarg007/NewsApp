@@ -1,1 +1,0 @@
-# NewsApp based on MERN

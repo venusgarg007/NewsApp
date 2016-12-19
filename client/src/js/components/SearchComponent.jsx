@@ -1,22 +1,29 @@
 import React from 'react';
 
 export default class SearchComponent extends React.Component {
-	constructor() {
-		super();
-		this.fetchData = this.fetchData.bind(this);
-	}
+  constructor(){
+    super();
+    this.searchClick = this.searchClick.bind(this);
+  }
 
-	fetchData() {
-		var searchData = document.getElementById('searchbox').value;
-		this.props.value(searchData);
-	}
+  searchClick(){
+    var search = this.refs.searchText.value;
+    this.props.sendSearchValue(search);
+  }
 
-	render() {
-		return(
-		<div>
-		<input type = "text" id = "searchbox" placeholder = "Search here..." />
-		<input type = "button" id = "searchbutton" onClick = {this.fetchData} value="search" />
-		</div>
-		)
-	}
+  render(){
+    return(
+      <div className = "container">
+        <div className = "navbar">
+          <div className = "container">
+            <h3 className = "nav navbar-nav pull-left">View </h3>
+            <div className = "nav navbar navbar-nav pull-right">
+              <input type = "text" placeholder = "Search" ref = "searchText" />
+              <input type = "submit" value = "Search" id = "searchBtn" onClick = {this.searchClick} />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }

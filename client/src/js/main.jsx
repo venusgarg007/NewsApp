@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 var {browserHistory, Route, Router, IndexRoute} = require('react-router');
 
 import About from './components/About.jsx';
-import MainComponent from './components/MainComponent.jsx';
+import MainComponent from './components/MainWindow.jsx';
 import NavBar from './components/NavBar.jsx';
 
 class Main extends React.Component {
@@ -22,7 +22,7 @@ class Main extends React.Component {
 ReactDOM.render(
 <Router history={browserHistory}>
 	<Route path="/" component={Main} >
-		<IndexRoute component={MainComponent}/>
+		<IndexRoute component={MainWindow}/>
 		<Route path="/home" component={MainComponent}/>
 		<Route path="/about" component={About}/>
 	</Route>
